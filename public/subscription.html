@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Membership page</title>
+    <style>
+      body {
+        background-color: #ffe6e6;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+      }
+      
+      .membership-card {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        margin-bottom: 20px;
+        padding: 20px;
+      }
+      
+      .silver {
+        background-color: #b3b3b3;
+        color: #fff;
+      }
+      
+      .gold {
+        background-color: #ffd700;
+        color: #000;
+      }
+      
+      .platinum {
+        background-color: #00bfff;
+        color: #fff;
+      }
+      
+      .platinum-plus {
+        background-color: #800080;
+        color: #fff;
+      }
+      
+      .btn {
+        background-color: #4CAF50;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+        font-size: 16px;
+        padding: 10px 20px;
+        border-radius: 5px;
+        float: right;
+      }
+      
+      .btn:hover {
+        background-color: #3e8e41;
+      }
+    </style>
+  </head>
+  <body>
+    <div className="membership-card silver">
+      <h2>Silver Membership</h2>
+      <p>Get access to exclusive content and discounts.</p>
+      <button className="btn">Add to cart</button>
+    </div>
+    
+    <div className="membership-card gold">
+      <h2>Gold Membership</h2>
+      <p>Get access to even more exclusive content and discounts.</p>
+      <button className="btn">Add to cart</button>
+    </div>
+    
+    <div className="membership-card platinum">
+      <h2>Platinum Membership</h2>
+      <p>Get access to our most exclusive content and discounts.</p>
+      <button className="btn">Add to cart</button>
+    </div>
+    
+    <div className="membership-card platinum-plus">
+      <h2>Platinum+ Membership</h2>
+      <p>Get access to everything we offer, plus personal coaching and support.</p>
+      <button className="btn">Add to cart</button>
+    </div>
+  </body>
+</html>

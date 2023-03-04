@@ -10,9 +10,9 @@ function Card(props) {
     const indianRuppes = price*80;
     return (
         <>  
-            <div class="card col-3 w-25 m-1  border ">
-                <img src={image} class="card-img-top w-50 m-auto mt-1 p-1" height={100} width={100} alt="..." />
-                <div class="card-body">
+            <div className="card col-3 w-25 m-1  border ">
+                <img src={image} className="card-img-top w-50 m-auto mt-1 p-1" height={100} width={100} alt="..." />
+                <div className="card-body">
                     <div className="row">
                         <div className="col-12 text-truncate">
                             {title}

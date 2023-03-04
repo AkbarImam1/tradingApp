@@ -1,0 +1,328 @@
+/* .contact-form {
+    position: relative;
+    text-align: center;
+  }
+  
+  .contact-btn {
+    background-color: #ff7f50;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  }
+  
+  .contact-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease;
+  }
+  
+  .contact-popup.show {
+    opacity: 0.8;
+    visibility: visible;
+  }
+  
+  .contact-content {
+    background-color: white;
+    position: relative;
+    max-width: 600px;
+    padding: 30px;
+    border-radius: 4px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+    transform: scale(0.7);
+    opacity: 0;
+    transition: all 0.5s ease;
+  }
+  
+  .contact-popup.show .contact-content {
+    transform: scale(1);
+    opacity: 1;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ff7f50;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    font-size: 16px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  }
+  
+  .close-btn:hover {
+    background-color: #ff6347;
+  }
+  .contact h2{
+    font-size: 3rem;
+    opacity: 0.6;
+    margin: 50px 0 30px;
+  
+  }
+  .contact{
+    width: 100%;
+  }
+  .contact form{
+  
+    transform: translateX(50%);
+      width: 100%;
+  }
+  
+  .contact p {
+    font-size: 1rem;
+    opacity: .78;
+    text-align: left;
+    padding-top: 7px;
+  }
+  .form-button{
+    position: relative;
+    right: 263px;
+    margin: 25px 0;
+  
+  }
+  .sub{
+    position: relative;
+    left:80px;
+  }
+  .close{
+    position: relative;
+    right: 100px;
+  }
+
+/* My Account CSS */
+ .circular-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 50%;
+  width: 400px;
+  height: 400px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.circular-popup h2 {
+  margin-top: 0;
+}
+
+.circular-popup p {
+  margin-bottom: 10px;
+}
+
+.circular-popup .button-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.circular-popup button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  background-color: #2196f3;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.circular-popup button:hover {
+  background-color: #0d47a1;
+}
+
+#id,
+#name,
+#email,
+#total-items,
+#purchased-item {
+  font-weight: bold;
+}  */
+ /* SignIn page css */ 
+ /* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: Quicksand, sans-serif;
+} */
+
+/* html {
+  font-size: 62.5%;
+}  */
+ 
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-wrapper {
+  width: 100rem;
+  height: 70rem;
+  background-color: #eee;
+  border-radius: 3rem;
+  box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.banner {
+  position: absolute;
+  top: 25%;
+  left: -30rem;
+  text-align: center;
+  color: #fff;
+  width: 30rem;
+  z-index: 100;
+  transition: left 0.8s;
+}
+
+.container.change .banner {
+  left: 5rem;
+}
+
+.banner h1 {
+  font-size: 4rem;
+  margin-bottom: 3rem;
+}
+
+.banner p {
+  font-size: 2rem;
+}
+.sellerRegister{
+    height: 500px;
+    
+}
+
+.green-bg {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #b5b8b8, #494a4a);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  transition: width 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.container.change .green-bg {
+  width: 40%;
+}
+
+.green-bg button {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 16rem;
+  height: 5rem;
+  background-color: transparent;
+  border: 0.1rem solid #fff;
+  border-radius: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.signup-form {
+  width: 60rem;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10rem 0;
+  transition: left 1.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.container.change .signup-form {
+  left: 40rem;
+}
+
+.signup-form h1 {
+  font-size: 4rem;
+  color: #575a5a;
+}
+
+.social-media {
+  display: flex;
+}
+
+.social-media i {
+  width: 4rem;
+  height: 4rem;
+  border: 0.1rem solid #777;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 2rem;
+  font-size: 2rem;
+  color: #555;
+}
+
+.signup-form p {
+  font-size: 1.8rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.input-group {
+  position: relative;
+}
+
+.input-group input {
+  width: 28rem;
+  height: 5rem;
+  padding: 1rem 1rem 1rem 3rem;
+  background-color: #ddd;
+  border: none;
+  border-radius: 0.5rem;
+}
+
+.input-group i {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.signup-form button {
+  width: 16rem;
+  height: 5rem;
+  background-color: #dbdedb;
+  border: none;
+  border-radius: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: #fff;
+  margin-top: 3rem;
+  cursor: pointer;
+} 
