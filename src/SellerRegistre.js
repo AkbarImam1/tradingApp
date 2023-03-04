@@ -1,64 +1,47 @@
-import reacrt from "react"
+import React, { useState } from 'react';
 
+const SellerRegister = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    shopName: '',
+    email: '',
+    phone: '',
+    city: '',
+    address: '',
+    gstNo: '',
+    panNo: '',
+    shopType: '',
+  });
 
-export default function SellerRegister() {
-    return (
-        <>
-        <div className="row justify-content-center">
-            <div className="container sellerRegister h-50 m-auto">
-                <div className="col-8 mx-5">
-                    .<div className="row justify-content-around">
-                        <div className="form-wrapper">
-                            <div className="banner">
-                                <h1>Greetings! </h1>
-                                <p>Welcome to Sign Up page, from here you can start your journey</p>
-                            </div>
-                            <div className="green-bg">
-                                <button type="button">Sign Up</button>
-                            </div>
-                            <form className="signup-form">
-                                <h1>Create Account</h1>
-                                <div className="social-media">
-                                    <i className="fab fa-facebook-f"></i>
-                                    <i className="fab fa-instagram"></i>
-                                    <i className="fab fa-linkedin-in"></i>
-                                </div>
-                                <p>or use your email for registration</p>
-                                <div className="input-group">
-                                    <i className="fas fa-user"></i>
-                                    <input type="text" placeholder="Name" />
-                                </div>
-                                <div className="input-group">
-                                    <i className="fas fa-envelope"></i>
-                                    <input type="email" placeholder="Email" />
-                                </div>
-                                <div className="input-group">
-                                    <i className="fas fa-lock"></i>
-                                    <input type="password" placeholder="Password" />
-                                </div>
-                                <div className="input-group">
-                                    <i className="fas fa-lock"></i>
-                                    <input type="text" placeholder="GST number" />
-                                </div>
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // submit form data to backend or do validation
+    console.log(formData);
+  };
 
-                                <div className="input-group">
-                                    <i className="fas fa-lock"></i>
-                                    <input type="text" placeholder="Adhaar" />
-                                </div>
+  const handleInputChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
 
-                                <div className="input-group">
-                                    <i className="fas fa-lock"></i>
-                                    <input type="text" placeholder="city" />
-                                </div>
+  return (
+    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+      <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column' }}>
+        <input type="text" name="name" placeholder="Name" value={formData.name} onChange={handleInputChange} style={{ margin: '10px', padding: '5px' }} />
+        <input type="text" name="shopName" placeholder="Shop Name" value={formData.shopName} onChange={handleInputChange} style={{ margin: '10px', padding: '5px' }} />
+        <input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleInputChange} style={{ margin: '10px', padding: '5px' }} />
+        <input type="text" name="phone" placeholder="Phone" value={formData.phone} onChange={handleInputChange} style={{ margin: '10px', padding: '5px' }} />
+        <input type="text" name="city" placeholder="City" value={formData.city} onChange={handleInputChange} style={{ margin: '10px', padding: '5px' }} />
+        <input type="text" name="address" placeholder="Address" value={formData.address} onChange={handleInputChange} style={{ margin: '10px', padding: '5px' }} />
+        <input type="text" name="gstNo" placeholder="GST No" value={formData.gstNo} onChange={handleInputChange} style={{ margin: '10px', padding: '5px' }} />
+        <input type="text" name="panNo" placeholder="PAN No" value={formData.panNo} onChange={handleInputChange} style={{ margin: '10px', padding: '5px' }} />
+        <input type="text" name="shopType" placeholder="Shop Type" value={formData.shopType} onChange={handleInputChange} style={{ margin: '10px', padding: '5px' }} />
+        <button type="submit" style={{ margin: '10px', padding: '5px', backgroundColor: 'blue', color: 'white', border: 'none', borderRadius: '5px' }}>Submit</button>
+      </form>
+    </div>
+  );
+};
 
-
-                                <button type="button">Sign Up</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            </div>
-        </>
-    )
-}
+export default SellerRegister;

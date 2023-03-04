@@ -27,19 +27,17 @@ const login = new mongoose.Schema({
         type:String,
         required:true,
     },
+    phone:{
+        type:String,
+        required:true
+    },
     email:{
         type:String,
-        unique:true,
-        required:true
+        required:true,
+        unique:true
     },
     password:{
         type:String,
-        required:true
-    },
-    phone:{
-        type:Number,
-        // min: [10, 'Must be at least 10'],
-        // max: [12,'Must be at least 10'],
         required:true
 
     },

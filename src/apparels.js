@@ -3,6 +3,7 @@ import BottomNavBar from "./BottomNavBar"
 import Navbar from "./navbar"
 import ApparelsHeading from "./ApparelsHeding"
 import Card from "./Card"
+import Footer from './Footer'
 const womenApparels = [
     {
         "id": 15,
@@ -166,6 +167,8 @@ function Apparels() {
                     </div>
                 </div>
             </div>
+
+            <Footer/>
 
         </>
     )

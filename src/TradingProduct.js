@@ -48,7 +48,7 @@ export default function TradingProduct() {
 
 
             <footer>
-                <div className="logos">
+                {/* <div className="logos">
                     <div className="logo">
                         <img src="akbar-logo.png" alt="Akbar Logo" />
                     </div>
@@ -58,7 +58,7 @@ export default function TradingProduct() {
                     <div className="logo">
                         <img src="shanur-logo.png" alt="Shanur Logo" />
                     </div>
-                </div>
+                </div> */}
                 <button className="buynow">Buy Now</button>
                 <p>&copy; 2023 Trading. All rights reserved.</p>
             </footer>

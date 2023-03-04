@@ -99,7 +99,7 @@ const electronics = [
 ]
 
 
-
+import Footer from './Footer'
 
 export default function Electronics(){
     const heading = "Electronics"
@@ -121,6 +121,7 @@ export default function Electronics(){
                     </div>
                 </div>
             </div>
+            <Footer/>
         </>
     )
 }

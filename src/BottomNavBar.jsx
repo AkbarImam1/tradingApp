@@ -1,6 +1,6 @@
 import react from "react"
 import { Link } from 'react-router-dom'
-
+import logo from "./images/logo.png"
 function BottomNavBar() {
     const url = "C:/Users/akbar imam/OneDrive/Desktop/e_commerce/my-app/images/logo.png";
     return (
@@ -8,7 +8,7 @@ function BottomNavBar() {
             <div className="contaiber-fluid">
                 <div className="container border-bottom">
                     <div className="row d-flex justify-content-around">
-                        <div className="col-3"><img src="../src/images/logo.png" height={80} width={80} alt="" /></div>
+                        <div className="col-3"><img src={logo} height={80} width={80} alt="" /></div>
                         {/* <div className="col-2"></div> */}
                         <div className="col-4 m-2 p-1">
                             <div className="container-fluid">

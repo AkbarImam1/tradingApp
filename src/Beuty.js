@@ -3,7 +3,7 @@ import Navbar from "./navbar"
 import BottomNavBar from "./BottomNavBar"
 import ApparelsHeading from "./ApparelsHeding"
 import Card from "./Card"
-
+import Footer from './Footer'
 const Beauty = [
 
     {
@@ -79,6 +79,7 @@ export default function Beuty(){
                     </div>
                 </div>
             </div>
+            <Footer/>
         </>
     )
 }

@@ -2,6 +2,7 @@ import react, { useState, useEffect } from "react";
 import NavBar from "./navbar";
 import BottomNavBar from "./BottomNavBar";
 import Card from "./Card";
+import Footer from "./Footer";
 function Home() {
     const [data, setData] = useState([]);
     useEffect(() => {
@@ -17,20 +18,21 @@ function Home() {
         <>
             <NavBar />
             <BottomNavBar />
-            
-             <div className="row justify-content-center">
-             <div className="col-8">
-             <div className="container  m-1 p-5 d-inline">
-                <div className="row justify-content-evenly">
-                {
-                    data.map((item, key) => {
-                        return <Card key={key} itemData={item} />
-                    })
-                }
+
+            <div className="row justify-content-center">
+                <div className="col-8">
+                    <div className="container  m-1 p-5 d-inline">
+                        <div className="row justify-content-evenly">
+                            {
+                                data.map((item, key) => {
+                                    return <Card key={key} itemData={item} />
+                                })
+                            }
+                        </div>
+                    </div>
                 </div>
             </div>
-             </div>
-            </div>
+            <Footer/>
         </>
     )
 }

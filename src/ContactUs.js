@@ -1,52 +1,101 @@
-import { ContactSupportSharp } from "@mui/icons-material"
-import react from "react"
+import React, { useState } from 'react';
 
+const ContactUs = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    query: '',
+  });
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle form submission
+  };
 
-export default function ContactUS() {
-    // const contactBtn = document.querySelector('.contact-btn');
-    // const contactPopup = document.querySelector('.contact-popup');
-    // const closeBtn = document.querySelector('.close');
-    
-    // contactBtn.addEventListener('click', () => {
-    //   contactPopup.classNameList.add('show');
-    // });
-    
-    // closeBtn.addEventListener('click', () => {
-    //   contactPopup.classNameList.remove('show');
-    // });
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
 
-    return (
-        <>
-            <div className="contact-form">
-                <button className="contact-btn" >Contact Us</button>
-                <div className="contact-popup">
-                    <div className="contact-content">
-                        <h2>Contact Us</h2>
-                        <form>
-                            <p>Name:</p>
-                            <div className="form-group">
-                                <input type="text" className="form-control" aria-describedby="emailHelp" placeholder="Enter Name" />
-                            </div>
-                            <p>E-mail:</p>
-                            <div className="form-group">
-                                <input type="e-email" className="form-control" aria-describedby="emailHelp" placeholder="Enter E-mail" />
-                            </div>
-                            <div className="form-group">
-                                <p>Message:</p>
-                                <textarea className="form-control" rows="6" placeholder="Please type your query"></textarea>
-                            </div>
-                        </form>
-                        <input className=" sub form-button btn btn-primary" type="submit" name="contact-sub" value="Submit" />
-                        <button className="close btn btn-danger" >Close</button>
-                    </div>
+  return (
+    <div style={{ 
+      border: '1px solid #ccc',
+      borderRadius: '5px',
+      padding: '10px',
+      boxShadow: '0 2px 5px rgba(0, 0, 0, 0.1)',
+      maxWidth: '400px',
+      margin: '0 auto',
+    }}>
+      <h2 style={{ margin: '0' }}>Contact Us</h2>
+      <form onSubmit={handleSubmit}>
+        <div style={{ marginBottom: '10px' }}>
+          <label htmlFor="name" style={{ display: 'block' }}>Name</label>
+          <input 
+            type="text" 
+            id="name" 
+            name="name" 
+            value={formData.name} 
+            onChange={handleChange}
+            style={{ 
+              width: '100%',
+              padding: '8px',
+              borderRadius: '5px',
+              border: '1px solid #ccc',
+            }}
+          />
+        </div>
+        <div style={{ marginBottom: '10px' }}>
+          <label htmlFor="email" style={{ display: 'block' }}>Email</label>
+          <input 
+            type="email" 
+            id="email" 
+            name="email" 
+            value={formData.email} 
+            onChange={handleChange}
+            style={{ 
+              width: '100%',
+              padding: '8px',
+              borderRadius: '5px',
+              border: '1px solid #ccc',
+            }}
+          />
+        </div>
+        <div style={{ marginBottom: '10px' }}>
+          <label htmlFor="query" style={{ display: 'block' }}>Query</label>
+          <textarea 
+            id="query" 
+            name="query" 
+            value={formData.query} 
+            onChange={handleChange}
+            style={{ 
+              width: '100%',
+              padding: '8px',
+              borderRadius: '5px',
+              border: '1px solid #ccc',
+            }}
+          />
+        </div>
+        <button 
+          type="submit" 
+          style={{ 
+            backgroundColor: '#007bff',
+            color: '#fff',
+            border: 'none',
+            borderRadius: '5px',
+            padding: '10px',
+            fontSize: '16px',
+            cursor: 'pointer',
+            width: '100%',
+          }}
+        >
+          Submit
+        </button>
+      </form>
+    </div>
+  );
+};
 
-                </div>
-            </div>
-
-
-
-
-        </>
-    )
-}
+export default ContactUs;

@@ -1,33 +1,11 @@
-import userEvent from '@testing-library/user-event';
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 
-const SignInPage = () => {
-  const navigate = useNavigate();
+const SellerLogin = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   const handleSignInClick = () => {
-    const user = {email,password}
-    console.log(user)
-    fetch(`http://localhost:8080/login/${user}`,
-    {
-      method: "GET", // *GET, POST, PUT, DELETE, etc.
-      mode: "cors", // no-cors, *cors, same-origin
-      cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
-      credentials: "same-origin", // include, *same-origin, omit
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(user),
-    }).then((msg)=>{
-            if(msg){
-                // history.push('/cart')
-                navigate('/cart');
-            }else{
-                navigate('/userRegister')
-            }
-    })
+    // Handle Sign In button click
   };
 
   const handleResetPasswordClick = () => {
@@ -109,4 +87,4 @@ const SignInPage = () => {
   );
 };
 
-export default SignInPage;
+export default SellerLogin;

@@ -1,9 +1,13 @@
-import React, { useEffect } from 'react'
+import React, { useEffect,useState } from 'react'
 import { Link } from 'react-router-dom'
-
-
+import './pseudoNav.css'
+import CartPage from './Cart';
 
 function Navbar() {
+
+  const [isLogin,setLogin] = useState(false);
+  const [isSignUp,setSignUp] = useState(false);
+  const [isAdmin,setAdmin] = useState(true);
 
   return (
     <nav className="navbar navbar-expand-lg m-1 sticky-top shadow navbar-light bg-light position-sticky top-0">
@@ -17,7 +21,8 @@ function Navbar() {
             <div className="vr"></div>
             <li className="nav-item">
               
-              <ul className="navbar-nav">
+              {
+                !isLogin ? <ul className="navbar-nav">
                 <li className="nav-item dropdown">
                   <Link className="nav-link dropdown-toggle" to="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" bottomNavbar>
                     Sign In
@@ -27,12 +32,14 @@ function Navbar() {
                     <li className="m-1 p-2"><Link to="/sellerLogin">Seller Login</Link></li>
                   </ul>
                 </li>
-              </ul>
+              </ul>:<Link to='/cart'>Cart</Link>
+              }
             </li>
             <div className="vr"></div>
             <li className="nav-item">
               {/* <Link className="nav-link active p-1  mx-2 " to="/product">Register</Link> */}
-              <ul className="navbar-nav">
+               {
+                !isSignUp ?  <ul className="navbar-nav">
                 <li className="nav-item dropdown">
                   <Link className="nav-link dropdown-toggle" to="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" bottomNavbar>
                     Sign Up
@@ -42,7 +49,8 @@ function Navbar() {
                     <li className="m-1 p-2"><Link to="/sellerRegister">Seller Register</Link></li>
                   </ul>
                 </li>
-              </ul>
+              </ul>:null
+               }
             </li>
             <div className="vr"></div>
             <li className="nav-item">
@@ -54,7 +62,9 @@ function Navbar() {
             </li>
             <div className="vr"></div>
             <li className="nav-item">
-              <Link className="nav-link active p-1  mx-2 ml-1 " to="/Account"><i className="fa-solid p-1 fa-user"></i>My account</Link>
+             {
+              isAdmin ?  <Link className="nav-link active p-1  mx-2 ml-1 " to="/adminAccount">My account</Link>: <Link className="nav-link active p-1  mx-2 ml-1 " to="/userAccount">My account</Link>
+             }
             </li>
             <div className="vr"></div>
           </ul>

@@ -1,4 +1,5 @@
 import BottomNavBar from "./BottomNavBar";
+import Footer from "./Footer";
 import Navbar from "./navbar";
 
 export default function Subscription() {
@@ -29,6 +30,7 @@ export default function Subscription() {
                 <p>Get access to everything we offer, plus personal coaching and support.</p>
                 <button className="btn">Add to cart</button>
             </div>
+            <Footer/>
         </>
     )
 }
